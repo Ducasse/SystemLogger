@@ -1,11 +1,9 @@
 # An Extensible Object Logger
 
-There are several logging frameworks available for Pharo: SimplerLogger, PaulThePoulpe, TinyLogger, and ToothPick.
-Toothpick is developed by Joseph Pelrine and is one the
-most advanced and has a nice documentation. 
+There are several textual logging frameworks available for Pharo: SimplerLogger, PaulThePoulpe, TinyLogger, and ToothPick. Toothpick is developed by Joseph Pelrine and is one the most advanced and has a nice documentation. 
 Paul le Poulp is another interesting framework
-`http://concretetypeinference.blogspot.fr/2012/06/pharo-logger-aka-paul-octopus-or-le.html`. Finally
-there is also SimpleLog developed by Goran Krampe, Magnus Kling and Keith P. Hodges available at squeaksource.com.
+`http://concretetypeinference.blogspot.fr/2012/06/pharo-logger-aka-paul-octopus-or-le.html`. 
+Finally there is also SimpleLog developed by Goran Krampe, Magnus Kling and Keith P. Hodges available at squeaksource.com.
 
 So you can wonder why there is a need for yet another one. Well let us think a bit about the domain. Often
 logging is associated with outputting strings into a file and using grep to make sense out of them. Why
@@ -19,7 +17,7 @@ it is compatible with the idea of a string logger.
 Note that some ideas of this framework will be integrated in Beacon the future logging framework of Pharo.
 
 
-!! Starting with an example
+### Starting with an example
 With SystemLogger logging a message is as simple as sending the message `message:` to the class `Log`.
 
 ```
@@ -60,7 +58,7 @@ Now you may want to raise log of different importance. `Log` provides some prede
 	Log warn: 'the system is still running but you should have look at it'.
 ```
 
-!!! Log creation messages
+### Log creation messages
 In addition to simple creation messages, `Log` proposes other creation messages to improve the filtering of logs.
 
 The default creation messages are in addition to the simple `message:`.
@@ -78,7 +76,7 @@ Here is an example
 ```
 
 
-!!! Extra information
+### Extra information
 A log can also accept any optional information using key/value  
 
 ```
@@ -97,7 +95,7 @@ Since we do not know the exact scenario the Log class proposes the following mes
 
 ### Three core classes
 
-SystemLogger core is composed about 3 classes: `Log`, `SystemLogger` and `LogDispatcher` . The two first ones are public while the last one is a private class that the end user does not have toas shown in Figure *logCore* know. It raises also announcements: `LogAdded` and `LogRemoved`.
+SystemLogger core is composed about 3 classes: `Log`, `SystemLogger` and `LogDispatcher`. The two first ones are public while the last one is a private class that the end user does not have toas shown in Figure *logCore* know. It raises also announcements: `LogAdded` and `LogRemoved`.
 
 In addition, `LogLevel` encapsulates the logic of defining a level. A logLevel represents a level of severity in log messages. There are default log levels which can be used via class methods such as `critical`, `error`, `warning`, `information`, `debug` and `trace`.
 
