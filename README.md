@@ -5,6 +5,10 @@ Still you may want to use SystemLogger. Check the documentation.
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://img.shields.io/badge/license-MIT-blue.svg)
 
+
+SystemLogger proposes a Pharo solution that focuses on objects. The central concept is the Log object which represents a single logging event. The event can be specialized via subclassing with various types of events. Similar to Toothpick, it features a central object that collects log objects, and has several concrete loggers that consume the log objects through various bindings such as the standard output or a database. The size is also rather tiny, the core containing some 535 lines of code.
+
+
 ## Loading 
 The following script installs it in Pharo.
 
