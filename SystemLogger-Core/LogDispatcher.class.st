@@ -72,7 +72,7 @@ LogDispatcher class >> removeLoggerNamed: aString [
 { #category : 'initialize' }
 LogDispatcher class >> reset [
 	"self reset"
-	current ifNotNilDo: [ :cu |  cu loggers do: [ :each | each reset ]].
+	current ifNotNil: [ :cu |  cu loggers do: [ :each | each reset ]].
 	current := nil.
 	
 			
