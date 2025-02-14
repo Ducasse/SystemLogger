@@ -7,6 +7,7 @@ Still you may want to use SystemLogger. Check the documentation.
 
 
 SystemLogger proposes a Pharo solution that focuses on objects. The central concept is the Log object which represents a single logging event. The event can be specialized via subclassing with various types of events. Similar to Toothpick, it features a central object that collects log objects, and has several concrete loggers that consume the log objects through various bindings such as the standard output or a database. The size is also rather tiny, the core containing some 535 lines of code.
+Like in other logging frameworks, you can specify both levels of severity and tags that can be used for filtering.
 
 
 ## Loading 
